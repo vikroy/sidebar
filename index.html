@@ -1,1 +1,266 @@
 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-IN"> 
+	<head prefix="og: https://ogp.me/ns# ">
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+		
+		<!-- Must -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="description" content="Bootstrap Sidebar" />
+		<meta name="keywords" content="Bootstrap Sidebar, Sidebar with Bootstrap" />
+		<title>:: Bootstrap Sidebar ::</title>	
+		
+		<!-- og tags -->
+		<title>:: Bootstrap Sidebar ::</title>	
+		<meta name="description" content="Bootstrap Sidebar" />
+		<meta name="keywords" content=" Bootstrap 4 Sidebar" />
+		<meta property="og:url" content="" />
+		<meta property="og:title" content=":: Bootstrap Sidebar ::" >
+		<meta property="og:description" content="Bootstrap Sidebar" >
+		<meta property="og:type" content="website" >
+		<meta property="og:site_name" content="Bootstrap Sidebar" >
+		<meta property="og:image" content="https://skwebs.github.io/sidebar/img/icons-1200x1200.png">
+		<meta property="og:image:url" content="https://skwebs.github.io/sidebar/img/icon-1200x1200.png">
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:alt" content="icon-logo">
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="1200" />
+		
+		
+		<!-- other meta -->
+		<meta name="web_author" content="Satish Kumar Sharma">  
+		<meta name="copyright" content="Bootstrap Sidebar">
+		
+		<!-- Android  -->
+		<meta name="theme-color" content="black">
+		<meta name="mobile-web-app-capable" content="yes">
+		
+		<!-- iOS -->
+		<meta name="apple-mobile-web-app-title" content="BoitstrapSidebar">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		
+		<!-- Windows  -->
+		<meta name="msapplication-navbutton-color" content="white">
+		<meta name="msapplication-TileColor" content="white">
+		<meta name="msapplication-TileImage" content="img/icons/icon-144x144.png">
+		<meta name="msapplication-config" content="browserconfig.xml">
+		
+		<!-- Pinned Sites  -->
+		<meta name="application-name" content="BoostrapSidebar">
+		<meta name="msapplication-tooltip" content="Tooltip Text">
+		<meta name="msapplication-starturl" content="/sidebar/">
+		
+		<!-- Tap highlighting  -->
+		<meta name="msapplication-tap-highlight" content="yes">
+		
+		<!-- favicon  -->
+		<link href="favicon/favicon.icon" rel="shortcut icon" type="image/x-icon">
+		<link href="img/icons/icon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+		<link href="img/icons/icon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+		<link href="img/icons/icon-48x48.png" rel="icon" type="image/png" sizes="48x48">
+		
+		<!-- iOS  -->
+		<link href="img/icons/icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+		<link href="img/icons/icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+		<link href="img/icons/icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+		<link href="img/icons/icon-128x128.png" rel="apple-touch-icon" sizes="128x128">
+		<link href="img/icons/icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+		<link href="img/icons/icon-167x167.png" rel="apple-touch-icon" sizes="167x167">
+		<link href="img/icons/icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+		<link href="img/icons/icon-192x192.png" rel="apple-touch-icon" sizes="192x192">
+		
+		<!-- Pinned Tab  -->
+		<link href="img/icons/icon.svg" rel="mask-icon" size="any" color="red">
+		
+		<!-- Android  -->
+		<link href="img/icons/icon-192x192.png" rel="icon" sizes="192x192">
+		<link href="img/icons/icon-128x128.png" rel="icon" sizes="128x128">
+		
+		<!-- Others -->
+		
+		<!-- UC Browser  -->
+		<link href="img/icons/icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57">
+		<link href="img/icons/icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+		
+		<!-- Manifest.json  -->
+		<link href="manifest.json" rel="manifest">
+		
+		<!-- Font Awesome 4 -->
+		<link rel="stylesheet" href="./thirdParty/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Font Awesome 5 -->
+		<!--<link rel="stylesheet" href="./thirdParty/font-awesome/5.8.1/css/all.min.css">-->
+		<!-- Bootstrap core CSS -->
+		<link href="thirdParty/css/bootstrap.min.css?v4.3.1" rel="stylesheet">
+		<!-- Material Design Bootstrap -->
+		<link rel="stylesheet" href="thirdParty/css/mdb.min.css?v4.8.2" />
+		<!-- Sidebsr CSS -->
+		<link rel="stylesheet" href="dist/css/sidebar.css?v1.0" />
+		
+		<style type="text/css">
+		.preloader{
+		position:fixed;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		z-index:9876543210; 
+		background-color: #2a2a72;
+		background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items:center;
+		transition:all 2s ;
+		}
+		.preloader p{
+		bordr:1px solid;
+		color:#fff;
+		}
+		._preloader-hide{display:none;}
+		.preloader p:nth-child(1){
+		font-size:7.75rem;
+		font-weight:bold;
+		text-shadow:0 0 60px #000, 0 0 100px #000;
+		margin-top: -50px !important;
+		}
+		.preloader p:nth-child(2){
+		font-size:1.7rem;
+		text-shadow:2px 3px 5px #000;
+		margin-top: -70px !important;
+		}
+		.preloader p:nth-child(3){
+		font-size:1.2rem;
+		text-shadow:2px 3px 5px #000;
+		}
+		</style>
+		<script type="text/javascript">
+		window.onload = preloader;
+		function preloader(){
+		document.querySelector(".preloader").classList.add("_preloader-hide");
+		}
+		</script>
+	</head>
+	<body>
+	<!-- Default Setting
+	<body data-menu_under_nav="false" data-menu_side="left" data-brand_side="left">
+	-->
+	<!--preloader-->
+	<div class="preloader" >
+	<p class="" >Bootstrap Sidebar</p>
+	<p>www.anshumemorial.in</p>
+	<p>Please wait...</p>
+	</div>
+	<header>
+	<!--Navbar-->
+	<nav class="_sidebar _content-under-nav _menu-under-nav _menu-side-right _brand-side-right navbar navbar-expand-md p-0 navbar-light fixed-top white justify-content-sm-start">
+	  <!-- Navbar brand -->
+	  <a class="navbar-brand my-0 p-0 p-md-1 order-md-0 ml-md-0 ml-2" href="#">
+	  <img style="padding:.15rem;"  class=" border"  src="img/sidebarLogo.png" >
+	   </a>
+		
+		<button class="navbar-toggler mt-1 align-self-start hamburger " type="button">
+			<span class="hamburger-box">
+			<span class="hamburger-inner"></span>
+			</span>
+		</button>
+	  <!-- Menu content -->
+	  <div class=" mt-md-0 pt-2 p-md-0 d-flex flex-column flex-md-row flex-lg-row justify-content-md-end navbar-collapse _mobile-menu white" id="basicExampleNav">
+		<img class="d-md-none mb-2 shadow-sm border p-1" src="img/sidebarLogo.png" alt="Anshu Memorial Academy Logo" >
+	
+	    <!-- Links -->
+	    <ul class="navbar-nav align-self-stretch">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#">Home
+	          <span class="sr-only">(current)</span>
+	        </a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">About</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Contact</a>
+	      </li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">Admission</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">Result</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">Login</a>
+		</li>
+	
+	
+	      <!-- Dropdown -->
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown"
+	          aria-haspopup="true" aria-expanded="false">Student</a>
+	        <div class="dropdown-menu dropdown-primary" aria-labelledby="dropdown1">
+	          <a class="dropdown-item" href="#">Login</a>
+	          <a class="dropdown-item" href="#">Payment</a>
+	          <a class="dropdown-item" href="#">Result</a>
+	        </div>
+	      </li>
+	   
+	    </ul>
+	    <!-- Links -->
+		<form class="form-inline pr-3">
+	      <div class="md-form my-0">
+	        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+	      </div>
+	    </form>
+	  </div>
+	</nav>
+	<!--/.Navbar-->
+	</header>
+	<main>
+	<!--
+	<div style="height:100vh; position:absolute;z-index:-1;" > 
+		<img style="height:100vmax;" src="https://source.unsplash.com/WLUHO9A_xik/1600x900">
+	</div>
+		-->
+		
+		
+		
+		<p>
+		What is Lorem Ipsum?
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		
+		Why do we use it?
+		It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+		
+		Where does it come from?
+		Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+		
+		The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+		
+		Where can I get some?
+		There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+		</p>
+		
+		
+		</main>
+		<!-- Sidebar JavaScript -->
+		<script src="dist/js/sidebar.js?v1.0.0"></script>
+		<!-- JQuery -->
+		<script type="text/javascript" src="thirdParty/js/jquery.min.js?v3.4.0"></script>
+		<!-- Bootstrap tooltips -->
+		<script type="text/javascript" src="thirdParty/js/popper.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
+		<script type="text/javascript" src="thirdParty/js/bootstrap.min.js?v4.3.1"></script>
+		<!-- MDB core JavaScript -->
+		<script src="thirdParty/js/mdb.min.js?4.8.2"></script>
+		<!-- Swipe Detect JavaScript -->
+		<script src="js/init.js?v1.0.0"></script>
+		<!-- Share JavaScript -->
+		<script src="js/share.js?v1.0.0"></script>
+		<script type="text/javascript">
+		document.addEventListener("scroll", function() {
+		
+		}, false);
+		</script>
+	</body>
+</html>
