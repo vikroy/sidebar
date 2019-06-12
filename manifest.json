@@ -1,14 +1,14 @@
 {
   "name": "Bootstrap Sidebar",
-  "short_name": "BS",
+  "short_name": "BS_App",
   "icons": [
     {
-      "src": "img/icons/icon-192x192.png",
+      "src": "img/favicon/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "img/icons/icon-512x512.png",
+      "src": "img/favicon/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
