@@ -1,4 +1,4 @@
-/* sidebar.js */
+/* sidebar-pureJS.js */
 var nav = document.querySelector("nav");
 var mobileMenu = document.querySelector("._mobile-menu");
 var brand = document.querySelector(".navbar-brand");
