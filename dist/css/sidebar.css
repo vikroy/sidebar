@@ -20,12 +20,13 @@
  /*
  |-------------------–------------------------
  | mobile.css part
+ | changed _mobile-menu to navbar-collapse
  |--------------------------------------------
  */
 @media (max-width:768px){
 	*{margin:0;padding:0;}
 	.navbar{z-index:997;}
-	._mobile-menu{
+	.navbar-collapse{
 		z-index:999;
 		position:fixed;
 		top:0;/* set by js*/
@@ -36,13 +37,13 @@
 		transition:all ease .25s;
 		max-width:280px;
 	}
-	._mobile-menu.onRight{
+	.navbar-collapse.onRight{
 		left:auto;
 		right:0;
 		transform:translateX(100%);
 	}
-	._mobile-menu img{width:80%;image-rendering:;}
-	._mobile-menu._open{
+	.navbar-collapse img{width:80%;image-rendering:;}
+	.navbar-collapse._open{
 		transform: translateX(0);
 		overflow-y:auto;
 		box-shadow:2px 5px 5px grey;
