@@ -55,18 +55,16 @@ if(nav.classList.contains("_sidebar")){
 	| Hamburger Color
 	|---------------------------------------
 	*/
-	var hc1 = document.querySelector('.hamburger');
-	var hc2 = document.querySelector('.hamburger');
+	var root = document.documentElement;
 	if(nav.classList.contains("navbar-light")){
-		alert("navbar-light");
 		nav.classList.add("bg-light");
 		mobileMenu.classList.add("bg-light");
+		root.style.setProperty('--hamburger-color', 'black');
 	} else if(nav.classList.contains("navbar-dark")){
-		alert("navbar-dark");
-		nav.classList.add("bg-dark")
-		mobileMenu.classList.add("bg-dark")
+		nav.classList.add("bg-dark");
+		mobileMenu.classList.add("bg-dark");
+		root.style.setProperty('--hamburger-color', "white");
 	}
-	
 	
 	/*
 	|---------------------------------------
