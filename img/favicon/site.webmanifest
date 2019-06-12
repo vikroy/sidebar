@@ -1,6 +1,6 @@
 {
-    "name": "Bootsttap Sidebar",
-    "short_name": "BS",
+    "name": "Bootstrap Sidebar",
+    "short_name": "BS_App"
     "icons": [
         {
             "src": "img/favicon/android-chrome-192x192.png",
