@@ -1,6 +1,6 @@
 /* sidebar-pureJS.js */
 var nav = document.querySelector("nav");
-var mobileMenu = document.querySelector("._mobile-menu");
+var mobileMenu = document.querySelector(".navbar-collapse");
 var brand = document.querySelector(".navbar-brand");
 var $toggler = document.querySelector(".navbar-toggler");
 
@@ -50,6 +50,23 @@ if(nav.classList.contains("_sidebar")){
 	} else {
 		$toggler.classList.add("hamburger--arrowalt");
 	}
+	/*
+	|---------------------------------------
+	| Hamburger Color
+	|---------------------------------------
+	*/
+	var hc1 = document.querySelector('.hamburger');
+	var hc2 = document.querySelector('.hamburger');
+	if(nav.classList.contains("navbar-light")){
+		alert("navbar-light");
+		nav.classList.add("bg-light");
+		mobileMenu.classList.add("bg-light");
+	} else if(nav.classList.contains("navbar-dark")){
+		alert("navbar-dark");
+		nav.classList.add("bg-dark")
+		mobileMenu.classList.add("bg-dark")
+	}
+	
 	
 	/*
 	|---------------------------------------
