@@ -1,4 +1,8 @@
 /* sidebar.css */
+:root{
+--hamburger-color:#000;
+}
+
  /*
  |-------------------–------------------------
  | style.css part
@@ -64,9 +68,6 @@
 | c-hamburger.css part
 |--------------------------------------------
 */
-:root{
---hamburger-color:#fff;
-}
 
 .hamburger {
 	padding: 15px 15px;
@@ -208,4 +209,3 @@
 |  .css part
 |--------------------------------------------
 */
-
