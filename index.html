@@ -87,9 +87,9 @@
 		right:0;
 		z-index:9876543210; 
 		background-color: #2a2a72;
-		/*background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
-	*/background-image: linear-gradient(45deg, #222, #aaa) ;
-		display:flex;
+		background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+	/*background-image: linear-gradient(45deg, #222, #aaa) ;
+		*/display:flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items:center;
@@ -99,12 +99,11 @@
 		bordr:1px solid;
 		color:#fff;
 		}
-		._preloader-hide{display:none;}
 		.preloader p:nth-child(1){
 		font-size:2rem;
 		font-weight:bold;
 		text-shadow:3px 4px 5px #000,3px 4px 15px #000;
-		margin-top: -50px !important;
+		/*margin-top: -50px !important;*/
 		}
 		.preloader p:nth-child(2){
 		font-size:1.2rem;
@@ -112,19 +111,19 @@
 		}
 		.preloader p:nth-child(3){
 		font-size:1.2rem;
-		text-shadow:2px 3px 5px #000;
 		width:300px;
+		/*margin-top:-30px;*/
 		background:#c0de30;
-		border:.5px solid grey;
+		border:.5px solid white;
 		animation:move 1.2s ease-in-out infinite; 
-		}
+		z-index:987654322;}
 		@keyframes move{
 		0%{width:300px;}
 		50%{width:50px;}
 		100%{width:300px;}
 		}
 		@keyframes hid{
-		0%{opacity:1;}
+		0%{opacity:1;} 
 		100%{opacity:0;}
 		}
 		</style>
@@ -139,6 +138,7 @@
 	<p class="" >Bootstrap Sidebar</p>
 	<p>Please wait...</p>
 	<p></p>
+	<img style="width:100%;margin-top:0px;"  src="img/512.png" >
 	</div>
 	<header>
 	<!--Navbar-->
@@ -146,7 +146,7 @@
 	<nav data-nav_bg="linear-gradient(45deg, #000,#aaa)" class="_sidebar _content-under-nav _brand-side-right navbar navbar-expand-md p-0 navbar-dark fixed-top justify-content-sm-start">
 	  <!-- Navbar brand -->
 	  <a class="navbar-brand my-0 p-0 p-md-1 order-md-0 ml-md-0 ml-2" href="#">
-	  <img src="img/brand.jpg" >
+	  <img class="boder"  src="img/360.png" >
 	   </a>
 		
 		<button class="navbar-toggler mt-1 align-self-start hamburger " type="button">
@@ -156,7 +156,7 @@
 		</button>
 	  <!-- Menu content -->
 	  <div class=" mt-md-0 pt-2 p-md-0 d-flex flex-column flex-md-row flex-lg-row justify-content-md-end navbar-collapse " >
-		<img class="d-md-none mb-2 shadow-sm border p-1" src="img/brand.jpg" alt="Logo" >
+		<img class="d-md-none mb-2 shadow-sm border p-1" src="img/1200.png" alt="Logo" >
 	
 	    <!-- Links -->
 	    <ul class="navbar-nav align-self-stretch">
