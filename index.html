@@ -79,6 +79,7 @@
 		
 		<style type="text/css">
 		.preloader{
+		aimation : hid 2s ease-in-out 1s;
 		position:fixed;
 		top:0;
 		bottom:0;
@@ -86,7 +87,8 @@
 		right:0;
 		z-index:9876543210; 
 		background-color: #2a2a72;
-		background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+		/*background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+	*/background-image: linear-gradient(45deg, #222, #aaa) ;
 		display:flex;
 		flex-direction: column;
 		justify-content: center;
@@ -101,20 +103,32 @@
 		.preloader p:nth-child(1){
 		font-size:2rem;
 		font-weight:bold;
-		text-shadow:0 0 60px #000, 0 0 100px #000;
+		text-shadow:3px 4px 5px #000,3px 4px 15px #000;
 		margin-top: -50px !important;
 		}
 		.preloader p:nth-child(2){
 		font-size:1.2rem;
 		text-shadow:2px 3px 5px #000;
 		}
-		</style>
-		<script type="text/javascript">
-		window.onload = preloader;
-		function preloader(){
-		document.querySelector(".preloader").classList.add("_preloader-hide");
+		.preloader p:nth-child(3){
+		font-size:1.2rem;
+		text-shadow:2px 3px 5px #000;
+		width:300px;
+		background:#c0de30;
+		border:.5px solid grey;
+		animation:move 1.2s ease-in-out infinite; 
 		}
-		</script>
+		@keyframes move{
+		0%{width:300px;}
+		50%{width:50px;}
+		100%{width:300px;}
+		}
+		@keyframes hid{
+		0%{opacity:1;}
+		100%{opacity:0;}
+		}
+		</style>
+
 	</head>
 	<body>
 	<!-- Default Setting
@@ -124,6 +138,7 @@
 	<div class="preloader" >
 	<p class="" >Bootstrap Sidebar</p>
 	<p>Please wait...</p>
+	<p></p>
 	</div>
 	<header>
 	<!--Navbar-->
@@ -197,7 +212,6 @@
 		-->
 		
 		
-		
 		<p>
 		What is Lorem Ipsum?
 		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -216,6 +230,21 @@
 		
 		
 		</main>
+		<script type="text/javascript">
+		window.onload = preloader;
+		var pl = document.querySelector(".preloader");
+		function preloader(){
+		pl.style.WebkitAnimation = "hid .7s ease-in-out 2s";
+		pl.style.animation = "hid .7s ease-in-out 2s";
+		}
+		
+		pl.addEventListener("animationend", hid);
+		pl.addEventListener("WebkitAnimatioEnd", hid);
+		
+		function hid(){
+		pl.style.display = "none";
+		}
+		</script>
 		<!-- Sidebar JavaScript -->
 		<script src="dist/js/sidebar-pureJS.js?v1.0.0"></script>
 		<!-- JQuery -->
