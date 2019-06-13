@@ -1,6 +1,6 @@
 /* sidebar-pureJS.js */
 var nav = document.querySelector("nav");
-var mobileMenu = document.querySelector(".navbar-collapse");
+var menu_content = document.querySelector(".navbar-collapse");
 var brand = document.querySelector(".navbar-brand");
 var $toggler = document.querySelector(".navbar-toggler");
 
@@ -16,7 +16,7 @@ if(nav.classList.contains("_sidebar")){
 	//menu under navigation
 	function setMenuTop(){
 		var navOuterHeight = nav.offsetHeight;
-		mobileMenu.style.top = (navOuterHeight - .17) + "px";
+		menu_content.style.top = (navOuterHeight - .17) + "px";
 		}
 		setMenuTop(); 
 		window.addEventListener("resize", function (){
@@ -45,7 +45,7 @@ if(nav.classList.contains("_sidebar")){
 	|---------------------------------------
 	*/
 	if(nav.classList.contains("_menu-side-right")){
-		mobileMenu.classList.add("onRight");
+		menu_content.classList.add("onRight");
 		$toggler.classList.add("hamburger--arrowalt-r");
 	} else {
 		$toggler.classList.add("hamburger--arrowalt");
@@ -57,14 +57,33 @@ if(nav.classList.contains("_sidebar")){
 	*/
 	var root = document.documentElement;
 	if(nav.classList.contains("navbar-light")){
-		nav.classList.add("bg-light");
-		mobileMenu.classList.add("bg-light");
 		root.style.setProperty('--hamburger-color', 'black');
 	} else if(nav.classList.contains("navbar-dark")){
-		nav.classList.add("bg-dark");
-		mobileMenu.classList.add("bg-dark");
 		root.style.setProperty('--hamburger-color', "white");
 	}
+	
+	/*
+	|---------------------------------------
+	| Navbar Background & Color
+	|---------------------------------------
+	*/
+	var nav_bg = nav.getAttribute("data-nav_bg");
+	if(nav_bg!=""){
+		nav.style.background = nav_bg;
+		menu_content.style.background = nav_bg;
+	}else{
+		if(nav.classList.contains("navbar-light")){
+			nav.classList.add("bg-light");
+			menu_content.classList.add("bg-light");
+		} else if(nav.classList.contains("navbar-dark")){
+			nav.classList.add("bg-dark");
+			menu_content.classList.add("bg-dark");
+		}
+	}
+	
+	
+	
+	
 	
 	/*
 	|---------------------------------------
@@ -88,7 +107,7 @@ if(nav.classList.contains("_sidebar")){
 	|---------------------------------------
 	*/
 	/*$(".navbar-toggler, .overlay").on("click", function(){
-		$(".mobileMenu, .overlay").toggleClass("open");
+		$(".menu_content, .overlay").toggleClass("open");
 		$(".navbar-toggler").toggleClass("is-active");
 	});*/
 	var overlay = document.querySelector("._overlay");
@@ -96,12 +115,12 @@ if(nav.classList.contains("_sidebar")){
 	
 	$toggler.addEventListener("click", function(){
 		overlay.classList.toggle("_open");
-		mobileMenu.classList.toggle("_open");
+		menu_content.classList.toggle("_open");
 		$toggler.classList.toggle("is-active");
 	}, false);
 	overlay.addEventListener("click", function(){
 		overlay.classList.toggle("_open");
-		mobileMenu.classList.toggle("_open");
+		menu_content.classList.toggle("_open");
 		$toggler.classList.toggle("is-active");
 	}, false);
 	
@@ -142,12 +161,12 @@ if(nav.classList.contains("_sidebar")){
 		if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
 			if ( xDiff > 0 ) {
 				/* left swipe */ 
-				mobileMenu.classList.remove("_open");
+				menu_content.classList.remove("_open");
 				overlay.classList.remove("_open");
 				$toggler.classList.remove("is-active");
 			} else if(xDown < 10 && xDiff < 0){
 				/* right swipe */
-				mobileMenu.classList.add("_open");
+				menu_content.classList.add("_open");
 				overlay.classList.add("_open");
 				$toggler.classList.add("is-active");
 			}                       
