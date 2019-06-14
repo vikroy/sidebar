@@ -2,21 +2,6 @@
 :root{
 --hamburger-color:#000;
 }
-
- /*
- |-------------------–------------------------
- | style.css part
- |--------------------------------------------
- */
- *{margin:0;padding:0; box-sizing:border-box;}
- body, header, main, footer {overflow-x:hidden;}
- .navbar-brand{height:50px; transition:.3s linear;}
- .navbar-brand img{height:100%;}
- ._grd_txt{
-	 -webkit-background-clip: text;
-	 -webkit-text-fill-color: transparent;
- }
- 
  /*
  |-------------------–------------------------
  | mobile.css part
@@ -71,7 +56,7 @@
 */
 
 .hamburger {
-	padding: 15px 15px;
+	padding: 15px 13px 10px 15px;
 	display: inline-block;
 	cursor: pointer;
 	transition-property: opacity, filter;
@@ -204,9 +189,3 @@
 	bottom: 0;
 	transform: rotate(-90deg);
 	transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
-
-/*
-|-------------------–------------------------
-|  .css part
-|--------------------------------------------
-*/
