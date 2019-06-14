@@ -1,191 +1,182 @@
-/* sidebar.css */
-:root{
---hamburger-color:#000;
-}
- /*
- |-------------------–------------------------
- | mobile.css part
- | changed _mobile-menu to navbar-collapse
- |--------------------------------------------
- */
-@media (max-width:768px){
-	*{margin:0;padding:0;}
-	.navbar{z-index:997;}
-	.navbar-collapse{
-		z-index:999;
-		position:fixed;
-		top:0;/* set by js*/
-		bottom:0;
-		left:0;
-		margin:auto;
-		transform: translateX(-100%);
-		transition:all ease .25s;
-		max-width:280px;
+/* sidebar-jquery.js */
+if($("nav").hasClass("_sidebar")){
+	var navHeight = $("nav").height();
+	/*
+	|---------------------------------------
+	| Menu & Overlay js
+	|---------------------------------------
+	*/
+	var overlayElem = document.createElement('div');overlayElem.classList = "_overlay";
+	
+	if($("nav").hasClass("fixed-top") && $("nav").hasClass("_menu-under-nav")){
+	//menu under navigation
+	function menuUnderNav(){
+		$("navbar-collapse").css("top", (navHeight - .17));
+		}
+		menuUnderNav(); 
+		$("window").on("resize", function (){
+			menuUnderNav();
+		});
+		$("nav").on("click", function(){
+			menuUnderNav();
+		});
+		$(".navbar-toggler").on("click", function(){
+			menuUnderNav();
+		});
+		
+		$("body").append(overlayElem);
+	}else{
+		//menu under navigation
+		$("nav").append(overlayElem);
 	}
-	.navbar-collapse.onRight{
-		left:auto;
-		right:0;
-		transform:translateX(100%);
+	
+	/*
+	|---------------------------------------
+	| Mobile Menu Side Setting js
+	|---------------------------------------
+	*/
+	if($("nav").hasClass("_menu-side-right")){
+		$("navbar-collapse").addClass("onRight");
+		$(".navbar-toggler").addClass("hamburger--arrowalt-r");
+	} else {
+		$(".navbar-toggler").addClass("hamburger--arrowalt");
 	}
-	.navbar-collapse img{width:80%;image-rendering:;}
-	.navbar-collapse._open{
-		transform: translateX(0);
-		overflow-y:auto;
-		box-shadow:2px 5px 5px grey;
+	/*
+	|---------------------------------------
+	| Hamburger Color
+	|---------------------------------------
+	*/
+	var root = document.documentElement;
+	if($("nav").hasClass("navbar-light")){
+		root.style.setProperty('--hamburger-color', 'black');
+	} else if($("nav").hasClass("navbar-dark")){
+		root.style.setProperty('--hamburger-color', "white");
 	}
-	._overlay{
-		position:fixed;
-		top:0;
-		bottom:0;
-		left:0;
-		right:0;
-		background:rgba(0,0,0,0.5);
-		display:none;
+	
+	/*
+	|---------------------------------------
+	| Navbar Background & Color
+	|---------------------------------------
+	*/
+	var nav_bg = $("nav").attr("data-nav_bg");
+	if(nav_bg!=""){
+		$("nav, .navbar-collapse").css("background", nav_bg);
+		//$("navbar-collapse").css("background", nav_bg);
+	}else{
+		if($("nav").hasClass("navbar-light")){
+			$("nav, navbar-collapse").addClass("bg-light");
+	//		$("navbar-collapse").addClass("bg-light");
+		} else if(nav.hasClass("navbar-dark")){
+			$("nav, navbar-collapse").addClass("bg-light");
+			//$("navbar-collapse").addClass("bg-dark");
+		}
 	}
-	._overlay._open{
-		display:block;
-	}
-	.nav-link{padding-left:25px !important;}
-	.navbar-brand{height:50px;}
-}
-
-/*
-|-------------------–------------------------
-| c-hamburger.css part
-|--------------------------------------------
-*/
-
-.hamburger {
-	padding: 15px 13px 10px 15px;
-	display: inline-block;
-	cursor: pointer;
-	transition-property: opacity, filter;
-	transition-duration: 0.15s;
-	transition-timing-function: linear;
-	font: inherit;
-	color: inherit;
-	text-transform: none;
-	background-color: transparent;
-	border: 0;
-	margin: 0;
-	overflow: visible; 
-}
-.hamburger:hover {
-	opacity: 0.7; 
-}
-.hamburger.is-active:hover {
-	opacity: 0.7; 
-}
-	.hamburger.is-active .hamburger-inner,
-	.hamburger.is-active .hamburger-inner::before,
-	.hamburger.is-active .hamburger-inner::after {
-	background-color: var(--hamburger-color); 
-}
-	
-.hamburger-box {
-	width: 32px;
-	height: 20px;
-	display: inline-block;
-	position: relative; 
-}
-	
-.hamburger-inner {
-	display: block;
-	top: 50%;
-	margin-top: 0px; 
-}
-.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-	width: 30px;
-	height: 2px;
-	background-color: var(--hamburger-color);
-	border-radius: 4px;
-	position: absolute;
-	transition-property: transform;
-	transition-duration: 0.15s;
-	transition-timing-function: ease; }
-	.hamburger-inner::before, .hamburger-inner::after {
-	content: "";
-	display: block; 
-}
-.hamburger-inner::before {
-	top: -10px; 
-}
-.hamburger-inner::after {
-	bottom: -10px; 
-}
-	
-	
-/*
-* Arrow Alt
-*/
-.hamburger--arrowalt .hamburger-inner::before {
-	transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); 
-}
-	
-.hamburger--arrowalt .hamburger-inner::after {
-	transition: bottom 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); 
-}
-	
-.hamburger--arrowalt.is-active .hamburger-inner::before {
-	top: 0;
-	/*transform: translate3d(-8px, -10px, 0) rotate(-45deg) scale(0.7, 1);*/
-	transform: translate3d(-8px, -7px, 0) rotate(-45deg) scale(0.7, 1);
-	transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); 
-}
-	
-.hamburger--arrowalt.is-active .hamburger-inner::after {
-	bottom: 0;
-	/*transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(0.7, 1);*/
-	transform: translate3d(-8px, 7px, 0) rotate(45deg) scale(0.7, 1);
-	transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); 
-}
-	
 	
 	
 	/*
-	* Arrow Alt Right
+	|---------------------------------------
+	| Brand Side js
+	|---------------------------------------
 	*/
-	.hamburger--arrowalt-r .hamburger-inner::before {
-	transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }
-	
-	.hamburger--arrowalt-r .hamburger-inner::after {
-	transition: bottom 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }
-	
-	.hamburger--arrowalt-r.is-active .hamburger-inner::before {
-	top: 0;
-	/*transform: translate3d(8px, -10px, 0) rotate(45deg) scale(0.7, 1);*/
-	transform: translate3d(8px, -7px, 0) rotate(45deg) scale(0.7, 1);
-	transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }
-	
-	.hamburger--arrowalt-r.is-active .hamburger-inner::after {
-	bottom: 0;
-	/*transform: translate3d(8px, 10px, 0) rotate(-45deg) scale(0.7, 1);*/
-	transform: translate3d(8px, 7px, 0) rotate(-45deg) scale(0.7, 1);
-	transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }
-	
-	
+	if($("nav").hasClass("_brand-side-right")){
+		//brand side right
+		$(".navbar-brand").addClass("ml-auto order-1")
+	}else{
+		//brand side left
+		$(".navbar-brand").addClass("mr-auto order-0")
+	}
 	
 	
 	/*
-	* Squeeze
+	|---------------------------------------
+	| Open & Close Mobile Menu
+	|---------------------------------------
 	*/
-	.hamburger--squeeze .hamburger-inner {
-	transition-duration: 0.075s;
-	transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-	.hamburger--squeeze .hamburger-inner::before {
-	transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
-	.hamburger--squeeze .hamburger-inner::after {
-	transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+	$(".navbar-toggler, ._overlay").on("click", function(){
+		$(".navbar-collapse, ._overlay").toggleClass("_open");
+		$(".navbar-toggler").toggleClass("is-active");
+	});
 	
-	.hamburger--squeeze.is-active .hamburger-inner {
-	transform: rotate(45deg);
-	transition-delay: 0.12s;
-	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-	.hamburger--squeeze.is-active .hamburger-inner::before {
-	top: 0;
-	opacity: 0;
-	transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
-	.hamburger--squeeze.is-active .hamburger-inner::after {
-	bottom: 0;
-	transform: rotate(-90deg);
-	transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+	/*
+	|---------------------------------------
+	| Finger swipe detector js
+	| this part is mix js
+	|---------------------------------------
+	*/
+	document.addEventListener('touchstart', handleTouchStart, false);        
+	document.addEventListener('touchmove', handleTouchMove, false);
+	
+	var xDown = null;                                                        
+	var yDown = null;
+	
+	function getTouches(evt) {
+		return evt.touches ||
+		evt.originalEvent.touches;
+	}                                                     
+	
+	function handleTouchStart(evt) {
+		const firstTouch = getTouches(evt)[0];                                      
+		xDown = firstTouch.clientX;                                      
+		yDown = firstTouch.clientY;                                      
+	};                                                
+	
+	function handleTouchMove(evt) {
+		if ( ! xDown || ! yDown ) {
+			return;
+		}
+	
+		var xUp = evt.touches[0].clientX;                                    
+		var yUp = evt.touches[0].clientY;
+		
+		var xDiff = xDown - xUp;
+		var yDiff = yDown - yUp;
+		
+		if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+			if ( xDiff > 0 ) {
+				/* left swipe */ 
+				$(".navbar-collapse").removeClass("_open");
+				$("._overlay").removeClass("_open");
+				$(".navbar-toggler").removeClass("is-active");
+			} else if(xDown < 10 && xDiff < 0){
+				/* right swipe */
+				$(".navbar-collapse").addClass("_open");
+				$("._overlay").addClass("_open");
+				$(".navbar-toggler").addClass("is-active");
+			}                       
+		}
+		
+		
+		//use it when need to detection of finger swipe event
+		/*
+		if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*
+			if ( xDiff > 0 ) {
+				/* left swipe *
+			} else if(xDown < 10 && xDiff < 0){
+				/* right swipe *
+			}                       
+		} else {
+			if ( yDiff > 0 ) {
+				/* up swipe *
+			} else { 
+				/* down swipe *
+			}                                                                 
+		}
+		*/
+		
+		/* reset values */
+		xDown = null;
+		yDown = null;                                             
+	};
+	
+	/*
+	|---------------------------------------
+	| Content Under Nav js
+	|---------------------------------------
+	*/
+	function contentUnderNav(){
+		if($("nav").hasClass("fixed-top") && $("nav").hasClass("_content-under-nav")){
+			$("body").css("padding-top", (navHeight - 0.17));
+		}
+	}
+	contentUnderNav();
+}
