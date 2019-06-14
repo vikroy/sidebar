@@ -179,4 +179,5 @@ if($("nav").hasClass("_sidebar")){
 		}
 	}
 	contentUnderNav();
+	
 }
