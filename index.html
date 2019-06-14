@@ -74,51 +74,11 @@
 		<!-- Material Design Bootstrap -->
 		<link rel="stylesheet" href="thirdParty/css/mdb.min.css?v4.8.2" />
 		<!-- Sidebsr CSS -->
-		<link rel="stylesheet" href="dist/css/sidebar.min.css?v1.0" />
+		<link rel="stylesheet" href="dist/css/sidebar.css?v1.0" />
+		<!-- Style CSS -->
+		<link rel="stylesheet" href="css/style.css?v1.0" />
 		
 		<style type="text/css">
-		.preloader{
-			position:fixed;
-			top:0;
-			bottom:0;
-			left:0;
-			right:0;
-			z-index:9876543210; 
-			background-color: #2a2a72;
-			background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
-		}
-		.preloader, .preloader div{
-			display:flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items:center;
-		}
-		.preloader p{
-			position:relative;
-			width:100%;
-			background: white;
-			height:.1rem;
-			animation:move 1.2s ease-in-out infinite; 
-		}
-		.preloader p{margin-top:7vh;}
-			@keyframes move{
-			0%{width:60%;}
-			22%{width:10%;}
-			50%{width:95%;}
-			78%{width:10%;}
-			100%{width:60%;}
-		}
-		@keyframes hid{
-			0%{opacity:1;} 100%{opacity:0;}
-		}
-		.dropdown-menu{line-height:.5;}
-		@media only screen and (orientation: portrait) {
-			.preloader img{width:100%;}
-		}
-		@media only screen and (orientation: landscape) {
-			.preloader img{height:75%;}
-		}
-		.preloader div{width:100vmin;}
 		</style>
 
 	</head>
@@ -127,26 +87,26 @@
 	<body data-menu_under_nav="false" data-menu_side="left" data-brand_side="left">
 	-->
 	<!--preloader-->
-	<div class="preloader" >
+	<div class="preloader hvc" >
 	<img src="img/bs-1200.png" >
-	<div><p></p></div>
+	<div class="hvc" ><p></p></div>
 	</div>
 	<header>
 	<!--Navbar-->
 	<!--<nav data-nav_bg="linear-gradient(45deg, #000,#aaa)" class="_sidebar _content-under-nav _menu-under-nav _menu-side-right _brand-side-right navbar navbar-expand-md p-0 navbar-dark fixed-top justify-content-sm-start">-->
-	<nav data-nav_bg="linear-gradient(45deg, #000,#aaa)" class="_sidebar _content-under-nav navbar navbar-expand-md p-0 navbar-dark fixed-top justify-content-sm-start">
+	<nav data-nav_bg="transparent" class="_sidebar _content-under-navC navbar navbar-expand-md p-0 navbar-light fixed-top justify-content-sm-start">
 	  <!-- Navbar brand -->
-	  <a class="navbar-brand my-0 p-0 p-md-1 order-md-0 ml-md-0 ml-2" href="#">
-	  <img src="img/bs-360.png" >
+	  <a class="border navbar-brand my-0 p-0 p-md-1 order-md-0 ml-md-0 ml-2" href="#">
+	  <img class="py-1" src="img/bs-360.png" >
 	   </a>
 		
-		<button class="navbar-toggler mt-1 align-self-start hamburger " type="button">
+		<button class="navbar-toggler m-1 align-self-start hamburger my-auto border" type="button">
 			<span class="hamburger-box">
 			<span class="hamburger-inner"></span>
 			</span>
 		</button>
 	  <!-- Menu content -->
-	  <div class=" mt-md-0 pt-2 p-md-0 d-flex flex-column flex-md-row flex-lg-row justify-content-md-end navbar-collapse " >
+	  <div class="bg-light mt-md-0 pt-2 p-md-0 d-flex flex-column flex-md-row flex-lg-row justify-content-md-end navbar-collapse " >
 		<img class="d-md-none mb-2 shadow-sm p-1" src="img/bs-1200.png" alt="Logo" >
 	
 	    <!-- Links -->
@@ -196,6 +156,9 @@
 	<!--/.Navbar-->
 	</header>
 	<main>
+	<div class="w-100 hvc" >
+	<img class="img" src="img/school-child.jpg" alt="front pic" >
+	</div>
 		<p>
 		What is Lorem Ipsum?
 		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -218,8 +181,8 @@
 		window.onload = preloader;
 		var pl = document.querySelector(".preloader");
 		function preloader(){
-		pl.style.WebkitAnimation = "hid .7s ease-in-out 2s";
-		pl.style.animation = "hid .7s ease-in-out 2s";
+		pl.style.WebkitAnimation = "hid .7s ease-in-out ";
+		pl.style.animation = "hid .7s ease-in-out ";
 		}
 		
 		pl.addEventListener("animationend", hid);
@@ -245,9 +208,20 @@
 		<script src="dist/js/sidebar-jquery.js?v1.0.0"></script>
 		<!-- onpage JavaScript -->
 		<script type="text/javascript">
-		document.addEventListener("scroll", function() {
 		
-		}, false);
+		$(function () {
+			$(document).scroll(function () {
+				var $nav = $(".fixed-top");
+				$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+				$(".navbar-brand").toggleClass('zoom', $(this).scrollTop() > $nav.height());
+				$(".navbar-brand, .navbar-toggler").toggleClass('border', $(this).scrollTop() < $nav.height());			/*
+			if($(this).scrollTop() > $nav.height()){
+				$(".navbar-brand").addClass("zoom"); 
+			}else{
+				$(".navbar-brand").removeClass("zoom");
+			}*/
+			});
+		});
 		</script>
 	</body>
 </html>
