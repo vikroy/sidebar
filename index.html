@@ -74,44 +74,51 @@
 		<!-- Material Design Bootstrap -->
 		<link rel="stylesheet" href="thirdParty/css/mdb.min.css?v4.8.2" />
 		<!-- Sidebsr CSS -->
-		<link rel="stylesheet" href="dist/css/sidebar.css?v1.0" />
+		<link rel="stylesheet" href="dist/css/sidebar.min.css?v1.0" />
 		
 		<style type="text/css">
 		.preloader{
-		aimation : hid 2s ease-in-out 1s;
-		position:fixed;
-		top:0;
-		bottom:0;
-		left:0;
-		right:0;
-		z-index:9876543210; 
-		background-color: #2a2a72;
-		background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
-	/*background-image: linear-gradient(45deg, #222, #aaa) ;
-		*/display:flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items:center;
-		transition:all 2s ;
+			position:fixed;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			z-index:9876543210; 
+			background-color: #2a2a72;
+			background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 		}
-		.preloader img{
-		width:100%;
+		.preloader, .preloader div{
+			display:flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items:center;
 		}
 		.preloader p{
-		width:300px;
-		border:.5px solid white;
-		animation:move 1.2s ease-in-out infinite; 
-		margin:50px 0 100px 0;
+			position:relative;
+			width:100%;
+			background: white;
+			height:.1rem;
+			animation:move 1.2s ease-in-out infinite; 
 		}
-		@keyframes move{
-		0%{width:300px;}
-		50%{width:50px;}
-		100%{width:300px;}
+		.preloader p{margin-top:7vh;}
+			@keyframes move{
+			0%{width:60%;}
+			22%{width:10%;}
+			50%{width:95%;}
+			78%{width:10%;}
+			100%{width:60%;}
 		}
 		@keyframes hid{
-		0%{opacity:1;} 
-		100%{opacity:0;}
+			0%{opacity:1;} 100%{opacity:0;}
 		}
+		.dropdown-menu{line-height:.5;}
+		@media only screen and (orientation: portrait) {
+			.preloader img{width:100%;}
+		}
+		@media only screen and (orientation: landscape) {
+			.preloader img{height:75%;}
+		}
+		.preloader div{width:100vmin;}
 		</style>
 
 	</head>
@@ -122,12 +129,12 @@
 	<!--preloader-->
 	<div class="preloader" >
 	<img src="img/bs-1200.png" >
-	<p></p>
+	<div><p></p></div>
 	</div>
 	<header>
 	<!--Navbar-->
 	<!--<nav data-nav_bg="linear-gradient(45deg, #000,#aaa)" class="_sidebar _content-under-nav _menu-under-nav _menu-side-right _brand-side-right navbar navbar-expand-md p-0 navbar-dark fixed-top justify-content-sm-start">-->
-	<nav data-nav_bg="linear-gradient(45deg, #000,#aaa)" class="_sidebar _content-under-nav _brand-side-right navbar navbar-expand-md p-0 navbar-dark fixed-top justify-content-sm-start">
+	<nav data-nav_bg="linear-gradient(45deg, #000,#aaa)" class="_sidebar _content-under-nav navbar navbar-expand-md p-0 navbar-dark fixed-top justify-content-sm-start">
 	  <!-- Navbar brand -->
 	  <a class="navbar-brand my-0 p-0 p-md-1 order-md-0 ml-md-0 ml-2" href="#">
 	  <img src="img/bs-360.png" >
@@ -189,13 +196,6 @@
 	<!--/.Navbar-->
 	</header>
 	<main>
-	<!--
-	<div style="height:100vh; position:absolute;z-index:-1;" > 
-		<img style="height:100vmax;" src="https://source.unsplash.com/WLUHO9A_xik/1600x900">
-	</div>
-		-->
-		
-		
 		<p>
 		What is Lorem Ipsum?
 		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -229,8 +229,6 @@
 		pl.style.display = "none";
 		}
 		</script>
-		<!-- Sidebar JavaScript -->
-		<script src="dist/js/sidebar-pureJS.js?v1.0.0"></script>
 		<!-- JQuery -->
 		<script type="text/javascript" src="thirdParty/js/jquery.min.js?v3.4.0"></script>
 		<!-- Bootstrap tooltips -->
@@ -243,6 +241,9 @@
 		<script src="js/init.js?v1.0.0"></script>
 		<!-- Share JavaScript -->
 		<script src="js/share.js?v1.0.0"></script>
+		<!-- Sidebar JavaScript -->
+		<script src="dist/js/sidebar-jquery.js?v1.0.0"></script>
+		<!-- onpage JavaScript -->
 		<script type="text/javascript">
 		document.addEventListener("scroll", function() {
 		
