@@ -106,7 +106,7 @@
 			</span>
 		</button>
 	  <!-- Menu content -->
-	  <div class="white mt-md-0 pt-2 p-md-0 d-flex flex-column flex-md-row flex-lg-row justify-content-md-end navbar-collapse " >
+	  <div class=" mt-md-0 pt-2 p-md-0 d-flex flex-column flex-md-row flex-lg-row justify-content-md-end navbar-collapse " >
 		<img class="d-md-none mb-2 shadow-sm p-1" src="img/bs-1200.png" alt="Logo" >
 	
 	    <!-- Links -->
@@ -205,21 +205,16 @@
 		<!-- Share JavaScript -->
 		<script src="js/share.js?v1.0.0"></script>
 		<!-- Sidebar JavaScript -->
-		<script src="dist/js/sidebar-jquery.min.js?v1.0.0"></script>
+		<script src="dist/js/sidebar-jquery.js?v1.0.0"></script>
 		<!-- onpage JavaScript -->
 		<script type="text/javascript">
 		
 		$(function () {
 			$(document).scroll(function () {
 				var $nav = $(".fixed-top");
-				$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+				$(".fixed-top, .navbar-collapse").toggleClass('white', $(this).scrollTop() > $nav.height());
 				$(".navbar-brand").toggleClass('zoom', $(this).scrollTop() > $nav.height());
-				$(".navbar-brand, .navbar-toggler").toggleClass('border', $(this).scrollTop() < $nav.height());			/*
-			if($(this).scrollTop() > $nav.height()){
-				$(".navbar-brand").addClass("zoom"); 
-			}else{
-				$(".navbar-brand").removeClass("zoom");
-			}*/
+				$(".navbar-brand, .navbar-toggler").toggleClass('border', $(this).scrollTop() < $nav.height());			
 			});
 		});
 		</script>
