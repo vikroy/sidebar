@@ -1,7 +1,7 @@
 [Sidebar](https://skwebs.github.io/sidebar/) - with Bootstrap-4.3.1
 =========================================
 
-## Features
+** Features **
 1. Sidebar show only on mobile view. In desktop view sidebar change into normal navbar menu.
 2. Sidebar also open-close on left-right finger swipe. (This feature works only on touchscreen supported device.)
 3. You can set Sidebar Menu left or right as you wish.
@@ -12,17 +12,17 @@
 8. You can change navbar and Sidebar Menu background & color using predefined bootstrap class `navbar-light` or `navbar-dark`. You can also change only background using `data-bg_color`.
 
 
-[Demo-Page](https://skwebs.github.io/sidebar/demo.html)
+[Demo-Page](https://skwebs.github.io/sidebar/)
 ========================================
 
 ## Get Started
 
 You can use Sidebar plugin by using CDN or download it in your project locally.
 
-## CDN Links
+** CDN Links **
 
 
-#### Download locally.
+** Download locally. **
 
 [Download](https://github.com/skwebs/sidebar/tree/1.0.0-stable)
 
