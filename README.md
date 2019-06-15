@@ -14,6 +14,11 @@
 # [Demo-Page](https://skwebs.github.io/sidebar/)
 
 ## Get Started
+**Bootstrap-_Sidebar_** configration is very simple.
+1. You can download file locally and use in your project or, 
+2. Simply add jsDelivr CDN link in your project and use it.
+
+I have created pure javascript based js file `sidebar-pureJS-1.0.0.js` and jQuery based js file name `sidebar-jquery-1.0.0.js`
 
 You can use Sidebar plugin by using CDN or download it in your project locally.
 
