@@ -15,19 +15,29 @@
 
 ## Get Started
 **Bootstrap-_Sidebar_** configration is very simple.
-1. You can download file locally and use in your project or, 
-2. Simply add jsDelivr CDN link in your project and use it.
+1. You can download file locally or,
+2. Direct add jsDelivr CDN link in your project after bootstrap files.
 
-I have created pure javascript based js file `sidebar-pureJS-1.0.0.js` and jQuery based js file name `sidebar-jquery-1.0.0.js`
+I have created two type js file : 
+1. Pure javascript based `sidebar-pureJS-1.0.0.js` and,
+2. jQuery based `sidebar-jquery-1.0.0.js`
+but use any one in your in your project.
 
-You can use Sidebar plugin by using CDN or download it in your project locally.
+All file are available both form **original files** & **minified files** 
 
-### CDN Links
+### CDN (Original files) Links
+- **CSS file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/css/sidebar.css`
+- **Pure js file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-pureJS.js`
+- **jQuery based js file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-jquery.js`
 
+### CDN (Minified files) Links
+- **CSS file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/css/sidebar.min.css`
+- **Pure js file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-pureJS.min.js`
+- **jQuery based js file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-jquery.min.js`
 
-### Download locally.
+### Download all files link below.
 
-[Download](https://github.com/skwebs/sidebar/tree/1.0.0-stable)
+[Download files](https://github.com/skwebs/sidebar/tree/1.0.0-stable)
 
 
 
