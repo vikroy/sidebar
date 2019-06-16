@@ -28,24 +28,24 @@ All file are available both form **original files** & **minified files**
 ### CDN (Original files) Links
 
 - **CSS file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/css/sidebar.css`,
-**With html code** `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/css/sidebar.css">`
+- With html code `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/css/sidebar.css">`
 
 - **Pure js file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-pureJS.js`
-**With html code** `<script src="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-pureJS.js"></script>`
+- With html code `<script src="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-pureJS.js"></script>`
 
 - **jQuery based js file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-jquery.js`
-**With html code** `<script src="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-jquery.js"></script>`
+- With html code `<script src="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-jquery.js"></script>`
 
 ### CDN (Minified files) Links
 
 - **CSS file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/css/sidebar.min.css`
-**With html code** `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/css/sidebar.min.css">`
+- With html code `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/css/sidebar.min.css">`
 
 - **Pure js file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-pureJS.min.js`
-**With html code** `<script src="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-pureJS.min.js"></script>`
+- With html code `<script src="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-pureJS.min.js"></script>`
 
 - **jQuery based js file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-jquery.min.js`,
-**With html code** `<script src="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-jquery.min.js"></script>`
+- With html code `<script src="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-jquery.min.js"></script>`
 
 ### Download all files link below.
 
