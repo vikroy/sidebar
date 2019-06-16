@@ -26,14 +26,21 @@ but use any one in your in your project.
 All file are available both form **original files** & **minified files** 
 
 ### CDN (Original files) Links
-- **CSS file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/css/sidebar.css`
-- **Pure js file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-pureJS.js`
-- **jQuery based js file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-jquery.js`
 
+- **CSS file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/css/sidebar.css`,
+`<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/css/sidebar.css">`
+
+- **Pure js file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-pureJS.js`
+`<script src="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-pureJS.js"></script>`
+- **jQuery based js file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-jquery.js`
+<script src="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-jquery.js"></script>
 ### CDN (Minified files) Links
 - **CSS file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/css/sidebar.min.css`
+`<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/css/sidebar.min.css">`
 - **Pure js file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-pureJS.min.js`
-- **jQuery based js file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-jquery.min.js`
+`<script src="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-pureJS.min.js"></script>`
+- **jQuery based js file link:** `https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-jquery.min.js`,
+`<script src="https://cdn.jsdelivr.net/gh/skwebs/sidebar@1.0.0/dist/js/sidebar-jquery.min.js"></script>`
 
 ### Download all files link below.
 
